@@ -1,0 +1,4 @@
+<img [hidden]="loaded" class="dummyImage" [src]="dummyImage"/>
+<img [hidden]="!loaded" (load)="loaded = true" class="saved-img" [src]="item.url"/>
+<p>Dimension: {{ item.width + " x " + item.height }}</p>
+<button type="button" class="btn btn-primary"  (click)="onRemoveItem(item)">Remove</button>

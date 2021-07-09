@@ -1,0 +1,12 @@
+<div class="container">
+  <div class="row" *ngIf="items.length > 0" >
+    <div class="col-md-4" *ngFor="let item of items" >
+      <app-item [item]="item" (removeItem)="remove($event)"></app-item>
+    </div>
+  </div>
+
+  <div class="row" *ngIf="items.length == 0" >
+    <div class="col-md-4"  >
+      <p>No data to display.</p>
+  </div>
+</div>

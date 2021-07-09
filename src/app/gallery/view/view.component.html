@@ -1,0 +1,17 @@
+<div class="container">
+  <div class="row">
+    <div class="col-md-12">
+      <img [hidden]="loaded" class="dummyImage" [src]="dummyImage"/>
+      <img [hidden]="!loaded" (load)="loaded = true" [src]="url"/>
+      <!-- <img [src]="url" alt="" srcset=""> -->
+    </div>
+  </div>
+  <div class="row mt-4">
+    <div class="col-md-12">
+      <button type="button" class="btn btn-secondary mr-1" [disabled]="isLoading" (click)="prev()">Prev</button>
+      <button type="button" class="btn btn-primary mr-1" [disabled]="isLoading" (click)="next()">Next</button>
+      <button type="button" class="btn btn-success" [disabled]="isLoading" (click)="save()">Save</button>
+    </div>
+  </div>
+</div>
+
